@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,7 +23,7 @@ export default function Header() {
         <a href="#apropos" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">À propos</a>
         <a href="#blog&activités" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Blog & Activités</a>
 
-        <a href="#sengager" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">S'engager</a>
+        <a href="#sengager" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">S&apos;engager</a>
         <a href="#contact" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Contact</a>
       </nav>
 
