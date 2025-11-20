@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface FooterProps {
-  bgColor?: "primary-50" | "gray-50" | "yellow-50";
+  bgColor?: 'primary-50' | 'gray-50' | 'yellow-50';
 }
 
 const bgClassMap: Record<NonNullable<FooterProps["bgColor"]>, string> = {
@@ -11,7 +12,7 @@ const bgClassMap: Record<NonNullable<FooterProps["bgColor"]>, string> = {
   "yellow-50": "bg-yellow-50",
 };
 
-export default function Footer({ bgColor = "primary-50" }: FooterProps) {
+export default function Footer({ bgColor = 'primary-50' }: FooterProps) {
   const linkClass = "text-gray-600 hover:text-primary-600 transition-colors";
   const titleClass = "font-semibold text-gray-700 mb-4";
   const socialTitleClass = "font-semibold text-gray-700 mb-2";
@@ -21,20 +22,13 @@ export default function Footer({ bgColor = "primary-50" }: FooterProps) {
   return (
     <footer className={`${bgClass} pt-14 px-4 md:px-14 pb-8`}>
       <div className="max-w-7xl mx-auto flex flex-row items-start justify-between gap-8 overflow-x-auto">
-
-        {/* Logo + description */}
         <div className="shrink-0 w-[250px]">
           <h3 className="font-display text-2xl font-bold text-gray-700 mb-4">VIPHO Foundation</h3>
           <p className="text-sm text-gray-600 leading-relaxed">
-            Construire un monde où chaque être humain,
-            quelles que soient ses conditions,
-            jouit d'une vie digne,
-            d'opportunités équitables
-            et du respect de ses droits fondamentaux.
+            Construire un monde où chaque être humain, quelles que soient ses conditions, jouit d'une vie digne, d'opportunités équitables et du respect de ses droits fondamentaux.
           </p>
         </div>
 
-        {/* Navigation */}
         <div className="shrink-0 w-[200px]">
           <h3 className={titleClass}>Navigation</h3>
           <ul className={listClass}>
@@ -45,7 +39,6 @@ export default function Footer({ bgColor = "primary-50" }: FooterProps) {
           </ul>
         </div>
 
-        {/* Engagement */}
         <div className="shrink-0 w-[200px]">
           <h3 className={titleClass}>Engagement</h3>
           <ul className={listClass}>
@@ -54,7 +47,6 @@ export default function Footer({ bgColor = "primary-50" }: FooterProps) {
           </ul>
         </div>
 
-        {/* Réseaux sociaux */}
         <div className="shrink-0 w-[200px]">
           <h4 className={socialTitleClass}>Suivez-nous sur :</h4>
           <div className="flex space-x-6">
@@ -66,16 +58,10 @@ export default function Footer({ bgColor = "primary-50" }: FooterProps) {
         </div>
       </div>
 
-      <div className="border-t border-gray-200 mt-8 pt-8 text-center flex flex-row justify-between items-center">
+      <div className="border-t border-gray-200 mt-8 pt-8 text-center">
         <p className="text-sm text-gray-500">
           © {new Date().getFullYear()} VIPHO Foundation. Tous droits réservés.
         </p>
-
-        <div className="flex flex-row text-sm space-x-4 text-gray-500">
-          <a href="" className="">Mentions légales</a>
-          <a href="" className="">Condition d'utilisation</a>
-          <a href="" className="">Politique de confidentialité</a>
-        </div>
       </div>
     </footer>
   );
