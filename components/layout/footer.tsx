@@ -49,7 +49,7 @@ export default function Footer({ bgColor = 'primary-50' }: FooterProps) {
 
         <div className="shrink-0 w-[200px]">
           <h4 className={socialTitleClass}>Suivez-nous sur :</h4>
-          <div className="flex space-x-6">
+          <div className="flex space-x-4">
             <a href="#facebook" className={linkClass}><Image src="/icons/facebook.svg" alt="Facebook" width={30} height={30} /></a>
             <a href="#tiktok" className={linkClass}><Image src="/icons/tiktok.svg" alt="TikTok" width={30} height={30} /></a>
             <a href="#instagram" className={linkClass}><Image src="/icons/insta.svg" alt="Instagram" width={30} height={30} /></a>
@@ -58,10 +58,16 @@ export default function Footer({ bgColor = 'primary-50' }: FooterProps) {
         </div>
       </div>
 
-      <div className="border-t border-gray-200 mt-8 pt-8 text-center">
+      <div className="border-t border-gray-200 mt-8 pt-8 text-center flex flex-row justify-between">
         <p className="text-sm text-gray-500">
           © {new Date().getFullYear()} VIPHO Foundation. Tous droits réservés.
         </p>
+
+        <div className="flex flex-row text-sm text-gray-500 gap-4">
+          <a href="" className="">Mention légales</a>
+          <a href="" className="">Conditions d'utilisation</a>
+          <a href="" className="">Politique de confidentialité</a>
+        </div>
       </div>
     </footer>
   );
