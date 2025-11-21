@@ -24,8 +24,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="" className="flex px-15">
-
+      <section id="" className="flex flex-row px-15">
+        <div id="" className="">
+          <div className="flex flex-row items-center">
+            <h1 className="font-display font-bold text-2xl ">A propos</h1>
+            <div className="w-[100px] h-px bg-gray-400 ml-4"></div>
+          </div>
+        </div>
+        <div id="" className="w-[625px] h-[375px] bg-primary-300">
+          
+        </div>
       </section>
 
 
