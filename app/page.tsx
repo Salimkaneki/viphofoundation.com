@@ -33,7 +33,8 @@ export default function Home() {
           
         </div>
         <div id="" className="flex-1 h-[350px] bg-primary-300">
-            
+              
+              
         </div>
       </section>
 
