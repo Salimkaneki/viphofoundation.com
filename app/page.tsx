@@ -193,6 +193,18 @@ export default function Home() {
           <BlogCard />
         </div>
       </section>
+
+      {/**/}
+      <section className="flex flex-col px-15 py-10 gap-4">
+        <div className="flex flex-row items-center">
+          <h1 className={titleClass}>Objectifs</h1>
+          <div className="w-[100px] h-[1.5px] bg-gray-400 ml-4"></div>
+        </div>
+
+        <div className="w-full bg-yellow-50">
+          {/* Contenu à ajouter ici */} 
+        </div>
+      </section>
     </div>
   );
 }
