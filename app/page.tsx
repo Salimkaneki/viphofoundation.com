@@ -61,6 +61,36 @@ export default function Home() {
     scrollRef.current?.scrollBy({ left: 400, behavior: "smooth" });
   };
 
+  const testimonialRef = useRef<HTMLDivElement>(null);
+
+  const [canScrollTestLeft, setCanScrollTestLeft] = useState(false);
+  const [canScrollTestRight, setCanScrollTestRight] = useState(true);
+
+  const checkTestScroll = () => {
+    if (testimonialRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = testimonialRef.current;
+      setCanScrollTestLeft(scrollLeft > 0);
+      setCanScrollTestRight(scrollLeft + clientWidth < scrollWidth);
+    }
+  };
+
+  useEffect(() => {
+    checkTestScroll();
+    const ref = testimonialRef.current;
+    if (ref) {
+      ref.addEventListener('scroll', checkTestScroll);
+      return () => ref.removeEventListener('scroll', checkTestScroll);
+    }
+  }, []);
+
+  const scrollTestLeft = () => {
+    testimonialRef.current?.scrollBy({ left: -400, behavior: "smooth" });
+  };
+
+  const scrollTestRight = () => {
+    testimonialRef.current?.scrollBy({ left: 400, behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* -------- SECTION 1 -------- */}
@@ -72,7 +102,7 @@ export default function Home() {
 
           <div className="flex flex-row w-full gap-8">
             <div className="flex-1 h-[346px] bg-primary-300"></div>
-            <div className="w-[346px] h-[346px] bg-primary-500"></div>
+            <div className="w-[346px] h-[346px] bg-primary-900"></div>
           </div>
         </div>
       </section>
@@ -201,8 +231,102 @@ export default function Home() {
           <div className="w-[100px] h-[1.5px] bg-gray-400 ml-4"></div>
         </div>
 
-        <div className="w-full bg-yellow-50">
-          {/* Contenu à ajouter ici */} 
+        <div className="w-full bg-yellow-50 p-8">
+          <div className="flex flex-row gap-8 justify-center">
+            <div className="flex flex-col items-center text-center">
+              <h1 className="font-display text-4xl font-bold mb-4">Humanite</h1>
+              <p className="w-[350px] text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <h1 className="font-display text-4xl font-bold mb-4">Solidarite</h1>
+              <p className="w-[350px] text-gray-700">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <h1 className="font-display text-4xl font-bold mb-4">Espoir</h1>
+              <p className="w-[350px] text-gray-700">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-15 py-10">
+        <div className="flex flex-row items-center">
+          <h1 className={titleClass}>Témoignages</h1>
+          <div className="w-[100px] h-px bg-gray-400 ml-4"></div>
+        </div>
+
+        <div className="flex flex-row items-center justify-between mt-4">
+          <h1 className="font-sans text-3xl font-bold">
+            Ce que disent nos bénéficiaires
+          </h1>
+
+          <div className="flex gap-4">
+            <button onClick={scrollTestLeft} className="w-[100px] h-12 flex items-center justify-center text-primary-600 hover:text-primary-800">
+              <img
+                src={canScrollTestLeft ? "/icons/fleche-gauche-1.svg" : "/icons/fleche-gauche-0.svg"}
+                width="100"
+                height="18"
+                alt="Flèche gauche"
+              />
+            </button>
+            <button onClick={scrollTestRight} className="w-[100px] h-12 flex items-center justify-center text-primary-600 hover:text-primary-800">
+              <img
+                src={canScrollTestRight ? "/icons/fleche-droite-1.svg" : "/icons/fleche-droite-0.svg"}
+                width="112"
+                height="18"
+                alt="Flèche droite"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          ref={testimonialRef}
+          className="flex flex-row gap-8 overflow-x-auto mt-10"
+          style={{ scrollbarWidth: "none" }}
+        >
+          <div className="shrink-0 w-[400px] bg-white p-6 rounded-lg shadow-md border">
+            <div className="text-primary-500 text-4xl mb-4">"</div>
+            <p className="font-sans text-base text-gray-700 mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p className="font-sans text-sm font-bold text-gray-800">- Marie Dupont</p>
+            <p className="font-sans text-sm text-gray-600">Bénéficiaire</p>
+          </div>
+
+          <div className="shrink-0 w-[400px] bg-white p-6 rounded-lg shadow-md border">
+            <div className="text-primary-500 text-4xl mb-4">"</div>
+            <p className="font-sans text-base text-gray-700 mb-4">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p className="font-sans text-sm font-bold text-gray-800">- Jean Martin</p>
+            <p className="font-sans text-sm text-gray-600">Bénéficiaire</p>
+          </div>
+
+          <div className="shrink-0 w-[400px] bg-white p-6 rounded-lg shadow-md border">
+            <div className="text-primary-500 text-4xl mb-4">"</div>
+            <p className="font-sans text-base text-gray-700 mb-4">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <p className="font-sans text-sm font-bold text-gray-800">- Sophie Leroy</p>
+            <p className="font-sans text-sm text-gray-600">Bénéficiaire</p>
+          </div>
+
+          <div className="shrink-0 w-[400px] bg-white p-6 rounded-lg shadow-md border">
+            <div className="text-primary-500 text-4xl mb-4">"</div>
+            <p className="font-sans text-base text-gray-700 mb-4">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p className="font-sans text-sm font-bold text-gray-800">- Paul Durand</p>
+            <p className="font-sans text-sm text-gray-600">Bénéficiaire</p>
+          </div>
         </div>
       </section>
     </div>
