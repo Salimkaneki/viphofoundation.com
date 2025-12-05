@@ -1,7 +1,7 @@
 "use client";
 
-import { BlogCard } from "../../components/cards";
-import { ScrollableSection } from "../../components/sections";
+import { BlogCard } from "../../../components/cards";
+import { ScrollableSection } from "../../../components/sections";
 import { useRef, useState, useEffect } from "react";
 
 export default function AboutPage() {
