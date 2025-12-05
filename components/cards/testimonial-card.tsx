@@ -1,5 +1,3 @@
-import React from "react";
-
 interface TestimonialCardProps {
   quote: string;
   name: string;

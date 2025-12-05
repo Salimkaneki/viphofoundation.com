@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useRef, useState, useEffect, ReactNode } from "react";
+import { useRef, useState, useEffect, ReactNode } from "react";
 
 interface ScrollableSectionProps {
-  title: string;
+  title?: string;
   subtitle?: string;
   children: ReactNode;
   className?: string;
@@ -47,12 +47,14 @@ export default function ScrollableSection({
 
   return (
     <section className={`px-15 py-10 ${className}`}>
-      <div className="flex flex-row items-center">
-        <h1 className="font-display font-bold text-3xl text-gray-500">{title}</h1>
-        <div className="w-[100px] h-px bg-gray-400 ml-4"></div>
-      </div>
+      {title && (
+        <div className="flex flex-row items-center">
+          <h1 className="font-display font-bold text-3xl text-gray-500">{title}</h1>
+          <div className="w-[100px] h-px bg-gray-400 ml-4"></div>
+        </div>
+      )}
 
-      <div className="flex flex-row items-center justify-between mt-4">
+      <div className={`flex flex-row items-center ${title ? 'justify-between mt-4' : 'justify-end'}`}>
         {subtitle && (
           <h1 className="font-sans text-3xl font-bold">{subtitle}</h1>
         )}
@@ -84,7 +86,7 @@ export default function ScrollableSection({
       {/* --- SLIDER --- */}
       <div
         ref={scrollRef}
-        className="flex flex-row gap-8 overflow-x-auto mt-10"
+        className={`flex flex-row gap-12 overflow-x-auto ${title ? 'mt-10' : 'mt-4'}`}
         style={{ scrollbarWidth: "none" }}
       >
         {children}

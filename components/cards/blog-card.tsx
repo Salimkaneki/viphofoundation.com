@@ -1,10 +1,18 @@
-import React from "react";
+interface BlogCardProps {
+  cardColor?: string;
+  title?: string;
+}
 
-export default function BlogCard() {
-    return (
-        <div className="shrink-0 w-[500px]">
-            <div className="w-full h-[300px] bg-primary-300"></div>
-            <h2 className="font-sans text-xl font-medium text-gray-600 mt-4 underline hover:text-primary-400 hover:no-underline cursor-pointer">Lorem ipsum dolor sit am et,con sectetur adipiscing elit. </h2>
-        </div>
-    )
+export default function BlogCard({
+  cardColor = "bg-primary-300",
+  title = "Lorem ipsum dolor sit am et,con sectetur adipiscing elit."
+}: BlogCardProps) {
+  return (
+    <div className="shrink-0 w-[500px] group ]:">
+      <div className={`w-full h-[300px] ${cardColor}`}></div>
+      <h2 className="font-sans text-xl font-medium text-gray-600 mt-4 underline hover:text-primary-400 hover:no-underline cursor-pointer">
+        {title}
+      </h2>
+    </div>
+  );
 }
