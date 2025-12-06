@@ -1,5 +1,6 @@
-import { BlogCard } from "../../../components/cards";
-import { ScrollableSection } from "../../../components/sections";
+import { BlogCard } from "@/components/cards";
+import { ScrollableSection, SectionHeader } from "@/components/sections";
+import { TextBlogCard } from "@/components/cards";
 
 export default function BlogActivitePage() {
   return (
@@ -36,6 +37,45 @@ export default function BlogActivitePage() {
           title="Programme de santé préventive dans les quartiers populaires"
         />
       </ScrollableSection>
+
+      <section className="">
+        <div className="px-15 py-10">
+            <SectionHeader title="Tous les articles et blogs" />
+
+            <div className="">
+              <TextBlogCard 
+                date="10 août 2023"
+                readTime="5"
+                title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa accusamus dolorem eius."
+              />
+              
+              <TextBlogCard 
+                date="22 septembre 2023"
+                readTime="3"
+                title="Comment structurer un composant React proprement et efficacement."
+              />
+              
+              <TextBlogCard 
+                date="14 janvier 2024"
+                readTime="7"
+                title="Les bonnes pratiques UI/UX pour améliorer l’expérience utilisateur sur mobile."
+              />
+              
+              <TextBlogCard 
+                date="30 mars 2024"
+                readTime="4"
+                title="Guide rapide pour optimiser les performances d’un site Next.js."
+              />
+              
+              <TextBlogCard 
+                date="18 juin 2024"
+                readTime="6"
+                title="Pourquoi Tailwind CSS est devenu le standard du design moderne."
+              />
+            </div>
+
+        </div>
+      </section>
     </div>
   );
 }
