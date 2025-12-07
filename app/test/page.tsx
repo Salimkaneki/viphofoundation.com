@@ -1,19 +1,17 @@
 'use client';
 import React, { useState } from "react";
-import Footer from "@/components/layout/footer";
-import TextBlogCard from "@/components/cards/text-blogCard";
-import Pagination from "@/components/pagination";
-
+import Breadcrumb from "@/components/breadcrumb";
 
 export default function TestPage() {
-  const [currentPage, setCurrentPage] = useState(1);
+  const breadcrumbItems = [
+    { label: "Accueil", href: "/" },
+    { label: "Blog", href: "/blog-et-activite" },
+  ];
 
   return (
-    <div>
-      <Pagination
-        currentPage={currentPage}
-        totalPages={5}
-        onPageChange={setCurrentPage}
+    <div className="p-4">
+      <Breadcrumb
+        items={breadcrumbItems}
       />
     </div>
   );

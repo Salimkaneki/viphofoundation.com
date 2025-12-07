@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Geist, Geist_Mono } from "next/font/google";
+import { usePathname } from "next/navigation";
 import "./globals.css";
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
@@ -14,16 +16,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "VIPHO Foundation - Pour un avenir meilleur",
-  description: "Fondation dédiée à créer un impact positif et durable dans nos communautés.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
+  // Define footer colors per page/route
+  const footerColors: Record<string, 'primary-50' | 'gray-50' | 'yellow-50'> = {
+    'blog-et-activite': 'yellow-50',
+    // Exemple pour utiliser gray-50 sur une autre page :
+    // 'nom-de-la-page': 'gray-50',
+  };
+
+  // Extract the main route (e.g., 'blog-et-activite' from '/blog-et-activite' or '/(nav-pages)/blog-et-activite')
+  const mainRoute = pathname.split('/').filter(Boolean)[0] || '';
+  const footerBgColor = footerColors[mainRoute] || 'primary-50';
+
   return (
     <html lang="fr">
       <body
@@ -33,7 +43,7 @@ export default function RootLayout({
         <main className="grow">
           {children}
         </main>
-        <Footer />
+        <Footer bgColor={footerBgColor} />
       </body>
     </html>
   );
