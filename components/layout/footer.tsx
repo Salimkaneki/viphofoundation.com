@@ -22,14 +22,14 @@ export default function Footer({ bgColor = 'primary-50' }: FooterProps) {
   return (
     <footer className={`${bgClass} pt-14 px-4 md:px-14 pb-8`}>
       <div className="max-w-7xl mx-auto flex flex-row items-start justify-between gap-8 overflow-x-auto">
-        <div className="shrink-0 w-[250px]">
+        <div className="shrink-0 w-62.5">
           <h3 className="font-display text-2xl font-bold text-gray-700 mb-4">VIPHO Foundation</h3>
           <p className="text-sm text-gray-600 leading-relaxed">
             Construire un monde où chaque être humain, quelles que soient ses conditions, jouit d&apos;une vie digne, d&apos;opportunités équitables et du respect de ses droits fondamentaux.
           </p>
         </div>
 
-        <div className="shrink-0 w-[200px]">
+        <div className="shrink-0 w-50">
           <h3 className={titleClass}>Navigation</h3>
           <ul className={listClass}>
             <li><Link href="#apropos" className={linkClass}>À propos</Link></li>
@@ -39,7 +39,7 @@ export default function Footer({ bgColor = 'primary-50' }: FooterProps) {
           </ul>
         </div>
 
-        <div className="shrink-0 w-[200px]">
+        <div className="shrink-0 w-50">
           <h3 className={titleClass}>Engagement</h3>
           <ul className={listClass}>
             <li><Link href="#devenir-benevole" className={linkClass}>Devenir bénévole</Link></li>
@@ -47,7 +47,7 @@ export default function Footer({ bgColor = 'primary-50' }: FooterProps) {
           </ul>
         </div>
 
-        <div className="shrink-0 w-[200px]">
+        <div className="shrink-0 w-50">
           <h4 className={socialTitleClass}>Suivez-nous sur :</h4>
           <div className="flex space-x-4">
             <a href="#facebook" className={linkClass}><Image src="/icons/facebook.svg" alt="Facebook" width={30} height={30} /></a>

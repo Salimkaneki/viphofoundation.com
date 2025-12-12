@@ -11,7 +11,7 @@ export default function AboutPage() {
         <h1 className="font-display text-5xl font-bold text-center text-gray-800 mb-6">
           A Propos de VIPHO Foundation
         </h1>
-        <div className="bg-primary-400 w-[1246px] h-[346px]"></div>
+        <div className="bg-primary-400 w-311.5 h-86.5"></div>
       </section>
 
       <section className="bg-primary-100">
