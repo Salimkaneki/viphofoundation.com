@@ -25,7 +25,40 @@ export default function ArticlePage() {
         <div className="bg-primary-400 w-311.5 h-86.5"></div>
       </section>
 
-      {/* Section secondaire */}
+      <section className="w-full px-15 py-12">
+        <div className="grid grid-cols-[auto_1fr] gap-6">
+          {/* Colonne réseaux sociaux */}
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <div className="flex flex-col space-y-2">
+              <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">
+                <img src="/icons/x.svg" alt="X (Twitter)" className="w-8 h-8" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">
+                <img src="/icons/facebook.svg" alt="Facebook" className="w-8 h-8" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">
+                <img src="/icons/insta.svg" alt="Instagram" className="w-8 h-8" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">
+                <img src="/icons/tiktok.svg" alt="TikTok" className="w-8 h-8" />
+              </a>
+            </div>
+          </div>
+
+          {/* Colonne contenu texte */}
+          <div className="flex flex-col space-y-4 text-xl">
+            <div className="text-gray-600 font-semibold">
+              29 avril 2026 | 6 minutes de lecture
+            </div>
+            
+            <p className="text-gray-700 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section tertiaire */}
       <section className="w-full px-15 py-12">
         <div className="  text-gray-800">
           <SectionHeader title= "Autres articles"/>
