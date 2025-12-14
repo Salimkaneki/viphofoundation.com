@@ -1,7 +1,5 @@
 import Tag from "@/components/ui/tag";
-import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import Button from "@/components/ui/button";
 import Image from "next/image";
 import Breadcrumb from "@/components/breadcrumb";
 
