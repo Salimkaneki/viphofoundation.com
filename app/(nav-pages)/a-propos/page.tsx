@@ -1,10 +1,10 @@
 "use client";
 
-import { BlogCard } from "../../../components/cards";
-import { ScrollableSection } from "../../../components/sections";
+import { BlogCard } from "@/components/cards";
+import { ScrollableSection } from "@/components/sections";
 import { useRef, useState, useEffect } from "react";
 
-export default function AboutPage() {
+export default function AProposPage() {
   return (
     <div className="min-h-screen bg-white">
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center ">

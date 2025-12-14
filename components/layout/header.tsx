@@ -20,11 +20,11 @@ export default function Header() {
       </div>
 
       <nav className=" text-md hidden md:flex flex-row gap-8">
-        <a href="#apropos" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">À propos</a>
-        <a href="#blog&activités" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Blog & Activités</a>
+        <Link href="/a-propos" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">À propos</Link>
+        <Link href="/blog-et-activite" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Blog & Activités</Link>
 
         <Link href="/candidatures" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Candidatures</Link>
-        <a href="#contact" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Contact</a>
+        <Link href="/faire-un-don" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Faire un don</Link>
       </nav>
 
       <div className="flex flex-row gap-2">

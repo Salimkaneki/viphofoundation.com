@@ -1,16 +1,14 @@
 "use client";
 
 import Select from "@/components/ui/select";
-import { i } from "framer-motion/client";
-import EnrolmentCard from "@/components/cards/enrolment-card";
-import BlogCard from "@/components/cards/blog-card";
-import TestimonialCard from "@/components/cards/testimonial-card";
-import TextBlogCard from "@/components/cards/text-blogCard";
+import Input from "@/components/ui/input";
+import Textarea from "@/components/ui/textarea";
 import { useState } from "react";
-import Tag from "@/components/ui/tag";
 
 export default function TestPage() {
   const [selectedValue, setSelectedValue] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  const [textareaValue, setTextareaValue] = useState("");
 
   const departmentOptions = [
     "Tous les départements",
@@ -22,79 +20,63 @@ export default function TestPage() {
     "Alpes-Maritimes (06)"
   ];
 
-  const categoryOptions = [
-    "Toutes les catégories",
-    "Informatique",
-    "Marketing",
-    "Finance",
-    "Ressources Humaines"
-  ];
-
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-8">Test du Composant Select Réutilisable</h1>
-
-      <div className="space-y-6">
-        <div>
-          <h2 className="text-lg font-semibold mb-2">Select avec départements :</h2>
-          <Select
-            label="Département"
-            options={departmentOptions}
-            value={selectedValue}
-            onChange={setSelectedValue}
-            placeholder="Choisissez un département"
-          />
-          <p className="mt-2 text-sm text-gray-600">Valeur sélectionnée : {selectedValue || "Aucune"}</p>
+    <div className="min-h-screen bg-gray-50 p-8">
+      <div className="max-w-7xl mx-auto space-y-12">
+        {/* Header */}
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">Page de Test</h1>
+          <p className="text-gray-600">Test des composants et fonctionnalités</p>
         </div>
 
-        <div>
-          <h2 className="text-lg font-semibold mb-2">Select avec catégories :</h2>
-          <Select
-            label="Catégorie"
-            options={categoryOptions}
-            placeholder="Sélectionnez une catégorie"
-          />
-        </div>
+        {/* Form Components */}
+        <section className="bg-white p-6 rounded-lg shadow-sm">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Composants de Formulaire</h2>
 
-        <div className="mt-8 p-4 bg-gray-50 rounded">
-          <h2 className="text-lg font-semibold mb-2">Exemple d'utilisation :</h2>
-          <pre className="text-sm bg-gray-800 text-green-400 p-4 rounded overflow-x-auto">
-{`import Select from "@/components/ui/select";
-import { useState } from "react";
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-medium text-gray-700 mb-3">Select</h3>
+              <Select
+                label="Département"
+                options={departmentOptions}
+                value={selectedValue}
+                onChange={setSelectedValue}
+                placeholder="Choisissez un département"
+              />
+              <p className="mt-2 text-sm text-gray-600">
+                Valeur sélectionnée : <span className="font-medium">{selectedValue || "Aucune"}</span>
+              </p>
+            </div>
 
-export default function MyComponent() {
-  const [value, setValue] = useState("");
+            <div>
+              <Input
+                label="Nom"
+                placeholder="Entrez votre nom"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                required
+              />
+              <p className="mt-2 text-sm text-gray-600">
+                Valeur saisie : <span className="font-medium">{inputValue || "Vide"}</span>
+              </p>
+            </div>
 
-  const options = ["Option 1", "Option 2", "Option 3"];
+            <div>
+              <Textarea
+                label="Message"
+                placeholder="Entrez votre message"
+                value={textareaValue}
+                onChange={(e) => setTextareaValue(e.target.value)}
+                rows={4}
+              />
+              <p className="mt-2 text-sm text-gray-600">
+                Caractères : <span className="font-medium">{textareaValue.length}</span>
+              </p>
+            </div>
+          </div>
+        </section>
 
-  return (
-    <Select
-      label="Mon Label"
-      options={options}
-      value={value}
-      onChange={setValue}
-      placeholder="Choisissez une option"
-    />
-  );
-}`}
-          </pre>
-        </div>
-      </div>
-
-      <div className="">
-        <EnrolmentCard />
-      </div>
-
-      <div className="">
-        <BlogCard />
-      </div>
-
-      <div className="">
-        <TestimonialCard quote="This is a great testimonial!" name="John Doe" role="CEO" />
-      </div>
-
-      <div className="">
-        <TextBlogCard date="2023-10-01" readTime="5" title="Sample Blog Title" />
+        {/* Tests à ajouter */}
       </div>
     </div>
   );

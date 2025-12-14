@@ -32,18 +32,18 @@ export default function Footer({ bgColor = 'primary-50' }: FooterProps) {
         <div className="shrink-0 w-50">
           <h3 className={titleClass}>Navigation</h3>
           <ul className={listClass}>
-            <li><Link href="#apropos" className={linkClass}>À propos</Link></li>
-            <li><Link href="#blog&activités" className={linkClass}>Blog & Activités</Link></li>
-            <li><Link href="#sengager" className={linkClass}>S&apos;engager</Link></li>
-            <li><Link href="#contact" className={linkClass}>Contact</Link></li>
+            <li><Link href="/a-propos" className={linkClass}>À propos</Link></li>
+            <li><Link href="/blog-et-activite" className={linkClass}>Blog & Activités</Link></li>
+            <li><Link href="/s-engager" className={linkClass}>S&apos;engager</Link></li>
+            <li><Link href="/contact" className={linkClass}>Contact</Link></li>
           </ul>
         </div>
 
         <div className="shrink-0 w-50">
           <h3 className={titleClass}>Engagement</h3>
           <ul className={listClass}>
-            <li><Link href="#devenir-benevole" className={linkClass}>Devenir bénévole</Link></li>
-            <li><Link href="#faire-un-don" className={linkClass}>Faire un don</Link></li>
+            <li><Link href="/postuler" className={linkClass}>Devenir bénévole</Link></li>
+            <li><Link href="/faire-un-don" className={linkClass}>Faire un don</Link></li>
           </ul>
         </div>
 
