@@ -2,8 +2,12 @@
 
 import Select from "@/components/ui/select";
 import { i } from "framer-motion/client";
-import EnrolmentCard from "@/components/cards/enrolment";
+import EnrolmentCard from "@/components/cards/enrolment-card";
+import BlogCard from "@/components/cards/blog-card";
+import TestimonialCard from "@/components/cards/testimonial-card";
+import TextBlogCard from "@/components/cards/text-blogCard";
 import { useState } from "react";
+import Tag from "@/components/ui/tag";
 
 export default function TestPage() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -79,6 +83,18 @@ export default function MyComponent() {
 
       <div className="">
         <EnrolmentCard />
+      </div>
+
+      <div className="">
+        <BlogCard />
+      </div>
+
+      <div className="">
+        <TestimonialCard quote="This is a great testimonial!" name="John Doe" role="CEO" />
+      </div>
+
+      <div className="">
+        <TextBlogCard date="2023-10-01" readTime="5" title="Sample Blog Title" />
       </div>
     </div>
   );

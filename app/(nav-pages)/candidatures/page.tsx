@@ -7,7 +7,7 @@ import BlogCard from "@/components/cards/blog-card";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 
- export default function engagerPage() {
+ export default function CandidaturesPage() {
     const [selectedDepartment, setSelectedDepartment] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("");
     return (
@@ -15,7 +15,7 @@ import { useState } from "react";
         <section className="bg-primary-100 py-20 px-15">
             <div className="max-w-7xl mx-auto">
                 <div className="flex gap-5 flex-col mb-12">
-                    <SectionHeader title="S'engager" className="" />
+                    <SectionHeader title="Candidatures" className="" />
                     <h1 className="text-3xl font-bold text-gray-800 ">Rejoignez VIPHO et faites la différence !</h1>
                 </div>
 
@@ -63,6 +63,7 @@ import { useState } from "react";
                     <BlogCard
                         cardColor="bg-primary-200"
                         title="Comment contribuer à la transformation digitale de notre communauté"
+                        href="/candidatures/1"
                     />
                 </div>
             </div>
