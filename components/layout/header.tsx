@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Header() {
 
   return (
-    <header className="bg-white border-b border-b-gray-300 px-4 md:px-[60px] py-4 flex justify-between items-center sticky top-0 z-50">
+    <header className="bg-white border-b border-b-gray-300 px-4 md:px-15 py-4 flex justify-between items-center sticky top-0 z-50">
       <div className="flex items-center">
         <Link href="/">
           <Image
@@ -20,11 +20,11 @@ export default function Header() {
       </div>
 
       <nav className=" text-md hidden md:flex flex-row gap-8">
-        <a href="#apropos" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">À propos</a>
-        <a href="#blog&activités" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Blog & Activités</a>
+        <Link href="/a-propos" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">À propos</Link>
+        <Link href="/blog-et-activite" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Blog & Activités</Link>
 
-        <a href="#sengager" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">S&apos;engager</a>
-        <a href="#contact" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Contact</a>
+        <Link href="/candidatures" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Candidatures</Link>
+        <Link href="/faire-un-don" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Faire un don</Link>
       </nav>
 
       <div className="flex flex-row gap-2">

@@ -19,7 +19,7 @@ export default function Button({
         px-4 py-2
         rounded-md
         font-medium
-        inline-flex items-center
+        inline-flex items-center justify-center
         transition-all duration-200
         ${bgColor} ${textColor}
         hover:rounded-none
