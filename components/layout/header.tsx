@@ -1,9 +1,16 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
+  const [selectedLanguage, setSelectedLanguage] = useState("Fr");
+
+  const handleLanguageChange = (value: string) => {
+    setSelectedLanguage(value);
+    // Ici vous pourrez ajouter la logique pour changer la langue de l'application
+    console.log("Langue sélectionnée:", value);
+  };
 
   return (
     <header className="bg-white border-b border-b-gray-300 px-4 md:px-15 py-4 flex justify-between items-center sticky top-0 z-50">
@@ -27,11 +34,17 @@ export default function Header() {
         <Link href="/faire-un-don" className="text-gray-700 hover:text-primary-600 font-regular transition-colors">Faire un don</Link>
       </nav>
 
-      <div className="flex flex-row gap-2">
-            <div className="size-5 rounded-full bg-yellow-300">
-
-            </div>
-            <h1 className="">Fr</h1>
+      <div className="flex flex-row gap-2 items-center">
+        <span className="text-gray-700 text-sm">Fr | En | Es</span>
+        <select
+          value={selectedLanguage}
+          onChange={(e) => handleLanguageChange(e.target.value)}
+          className="px-3 py-1 bg-white border border-gray-300 rounded-md text-sm text-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-300 appearance-none"
+        >
+          <option value="Fr">Fr</option>
+          <option value="En">En</option>
+          <option value="Es">Es</option>
+        </select>
       </div>
 
     </header>

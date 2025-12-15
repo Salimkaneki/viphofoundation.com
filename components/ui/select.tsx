@@ -5,6 +5,7 @@ interface SelectProps {
   onChange?: (value: string) => void;
   placeholder?: string;
   required?: boolean;
+  leftElement?: React.ReactNode;
 }
 
 export default function Select({
@@ -13,7 +14,8 @@ export default function Select({
   value,
   onChange,
   placeholder = "Sélectionnez une option",
-  required = false
+  required = false,
+  leftElement
 }: SelectProps) {
   return (
     <div>
@@ -24,8 +26,13 @@ export default function Select({
         </label>
       )}
       <div className="relative">
+        {leftElement && (
+          <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+            {leftElement}
+          </div>
+        )}
         <select
-          className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-md text-gray-700 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-300"
+          className={`w-full ${leftElement ? 'pl-10' : 'px-4'} py-2 bg-white border border-gray-300 rounded-md text-md text-gray-700 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-300`}
           value={value}
           onChange={(e) => onChange?.(e.target.value)}
           required={required}
