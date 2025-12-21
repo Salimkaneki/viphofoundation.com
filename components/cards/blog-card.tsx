@@ -12,8 +12,8 @@ export default function BlogCard({
   href
 }: BlogCardProps) {
   const content = (
-    <div className="shrink-0 w-80 group cursor-pointer">
-      <div className={`w-full h-48 ${cardColor}`}></div>
+    <div className="shrink-0 w-125 group cursor-pointer">
+      <div className={`w-full h-75 ${cardColor}`}></div>
       <h2 className="font-sans text-xl font-medium text-gray-600 mt-4 underline group-hover:text-primary-400 group-hover:no-underline">
         {title}
       </h2>

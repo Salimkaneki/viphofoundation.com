@@ -86,7 +86,7 @@ export default function ScrollableSection({
       {/* --- SLIDER --- */}
       <div
         ref={scrollRef}
-        className={`flex flex-row gap-12 overflow-x-auto ${title ? 'mt-10' : 'mt-4'}`}
+        className={`flex flex-row gap-10 overflow-x-auto ${title ? 'mt-10' : 'mt-4'}`}
         style={{ scrollbarWidth: "none" }}
       >
         {children}

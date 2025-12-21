@@ -151,32 +151,17 @@ export default function Home() {
         <div className="flex-[0.95] h-87.5 bg-primary-300"></div>
       </section>
 
-      {/* -------- VISION -------- */}
-      <section className="flex flex-row px-15 py-10 gap-4">
-        <div className="flex-[0.95] h-87.5 bg-primary-300"></div>
+      {/* -------- VIDEO -------- */}
+      <section className="flex flex-col px-15 py-10 gap-15">
 
-        <div className="flex-[0.95]">
-          <div className="flex flex-col gap-2">
-            <div className="flex flex-row items-center">
-              <h1 className={titleClass}>Notre vision</h1>
-              <div className="w-25 h-px bg-gray-400 ml-4"></div>
-            </div>
+        <div className="flex flex-row items-center">
+          <h1 className={titleClass}>Vipho Foundation en vidéo</h1>
+          <div className="w-25 h-px bg-gray-400 ml-4"></div>
+        </div>
 
-            <h1 className="font-sans text-3xl font-bold">
-              Lorem Ipsum dolor sit amet
-            </h1>
 
-            <ul className="font-sans text-base text-gray-700 mt-4 space-y-2">
-              {visionItems.map((item, index) => (
-                <li key={index} className="flex items-center">
-                  <div className="bg-primary-100 rounded-full p-2 mr-3">
-                    <TickIcon />
-                  </div>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="flex align-center justify-center">
+          <div className="bg-primary-700 w-220 h-120 "></div>
         </div>
       </section>
 
