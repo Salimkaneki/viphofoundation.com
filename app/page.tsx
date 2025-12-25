@@ -163,7 +163,7 @@ export default function Home() {
             <BlogCard />
           </ScrollableSection>
         </div>
-      </section>
+      </section>  
 
       <section className="w-full">
         <div className="max-w-360 mx-auto">
