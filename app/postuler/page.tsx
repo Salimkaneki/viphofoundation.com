@@ -30,14 +30,13 @@ export default function PostulerPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form data:", formData);
     // Handle form submission
   };
 
   return (
     <div className="w-full">
       <section className="bg-primary-100 py-20 px-15">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-360 mx-auto">
           <div className="flex gap-5 flex-col mb-12">
             <SectionHeader title="Postuler" className="" />
             <h1 className="text-3xl font-bold text-gray-800">Soumettez votre candidature</h1>
@@ -45,14 +44,14 @@ export default function PostulerPage() {
 
           <div className="space-y-4">
             <p className="max-w-xl text-lg text-gray-700">
-              Vous souhaitez rejoindre l'équipe VIPHO ? Remplissez ce formulaire pour soumettre votre candidature.
+              Vous souhaitez rejoindre l&apos;équipe VIPHO ? Remplissez ce formulaire pour soumettre votre candidature.
               Que vous soyez intéressé par un poste ou un bénévolat, nous serons ravis de vous accueillir.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto py-12 px-15">
+      <section className="max-w-360 mx-auto py-12 px-15">
         <form onSubmit={handleSubmit} className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Input

@@ -4,6 +4,7 @@ import Breadcrumb from "@/components/breadcrumb";
 import { TextBlogCard } from "@/components/cards";
 import Pagination from "@/components/pagination";
 import { SectionHeader } from "@/components/sections";
+import Image from "next/image";
 
 export default function ArticlePage() {
   return (
@@ -31,16 +32,16 @@ export default function ArticlePage() {
           <div className="flex flex-col items-center justify-center space-y-4">
             <div className="flex flex-col space-y-2">
               <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">
-                <img src="/icons/x.svg" alt="X (Twitter)" className="w-8 h-8" />
+                <Image src="/icons/x.svg" alt="X (Twitter)" width={32} height={32} className="w-8 h-8" />
               </a>
               <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">
-                <img src="/icons/facebook.svg" alt="Facebook" className="w-8 h-8" />
+                <Image src="/icons/facebook.svg" alt="Facebook" width={32} height={32} className="w-8 h-8" />
               </a>
               <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">
-                <img src="/icons/insta.svg" alt="Instagram" className="w-8 h-8" />
+                <Image src="/icons/insta.svg" alt="Instagram" width={32} height={32} className="w-8 h-8" />
               </a>
               <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">
-                <img src="/icons/tiktok.svg" alt="TikTok" className="w-8 h-8" />
+                <Image src="/icons/tiktok.svg" alt="TikTok" width={32} height={32} className="w-8 h-8" />
               </a>
             </div>
           </div>
@@ -99,7 +100,7 @@ export default function ArticlePage() {
           <Pagination
             currentPage={1}
             totalPages={5}
-            onPageChange={(page) => console.log("Page changed to:", page)}
+            onPageChange={(_unusedPage) => {}}
           />
         </div>
       </section>

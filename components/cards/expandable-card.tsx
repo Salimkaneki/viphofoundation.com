@@ -5,7 +5,7 @@ export default function ExpandableCard() {
       <div
         className="
           bg-primary-dark
-          w-301.5 h-75
+          w-301.5 h-18.75
           overflow-hidden
           flex flex-col
           justify-center

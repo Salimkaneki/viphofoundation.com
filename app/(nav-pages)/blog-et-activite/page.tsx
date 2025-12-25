@@ -82,7 +82,7 @@ export default function BlogActivitePage() {
           <Pagination
             currentPage={1}
             totalPages={5}
-            onPageChange={(page) => console.log("Page changed to:", page)}
+            onPageChange={(_unusedPage) => {}}
           />
         </div>
       </section>

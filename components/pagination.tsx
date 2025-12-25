@@ -24,7 +24,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
 
   return (
     <div className="flex flex-row gap-4">
-      {Array.from({ length: Math.min(totalPages, 3) }, (_, i) => i + 1).map((page) => (
+      {Array.from({ length: Math.min(totalPages, 3) }, (unused, index) => index + 1).map((page) => (
         <button
           key={page}
           className={`w-16 h-16 border border-gray-300 flex justify-center items-center transition ${

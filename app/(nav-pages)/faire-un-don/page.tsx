@@ -36,7 +36,6 @@ export default function FaireUnDonPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Donation form data:", formData);
     // Handle form submission
   };
 
@@ -62,7 +61,7 @@ export default function FaireUnDonPage() {
               <div>
                 <p className="text-sm font-medium text-gray-700 mb-2">Banque :</p>
                 <p className="text-lg bg-white px-4 py-2 border border-gray-300 rounded-md">
-                  Ecobank Côte d'Ivoire
+                  Ecobank Côte d&apos;Ivoire
                 </p>
               </div>
             </div>
@@ -97,7 +96,7 @@ export default function FaireUnDonPage() {
             <div className="bg-green-50 p-6 rounded-lg border border-green-200">
               <h3 className="text-lg font-semibold text-green-800 mb-4">Dons de vivres</h3>
               <p className="text-gray-700 mb-4">
-                Vous pouvez apporter vos dons de vivres directement à nos locaux ou nous contacter pour l'organisation du retrait.
+                Vous pouvez apporter vos dons de vivres directement à nos locaux ou nous contacter pour l&apos;organisation du retrait.
               </p>
               <div className="text-sm text-gray-600">
                 <p><strong>Adresse :</strong> Sed vitae urna ac lorem sagittis ultrices.</p>
@@ -170,7 +169,7 @@ export default function FaireUnDonPage() {
 
           <div className="space-y-4">
             <p className="max-w-xl text-lg text-gray-700">
-              Votre générosité nous permet d'aider ceux qui en ont besoin. Choisissez le type de don qui vous convient le mieux.
+              Votre générosité nous permet d&apos;aider ceux qui en ont besoin. Choisissez le type de don qui vous convient le mieux.
             </p>
           </div>
         </div>

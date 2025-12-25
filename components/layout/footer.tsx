@@ -20,8 +20,9 @@ export default function Footer({ bgColor = 'primary-50' }: FooterProps) {
   const bgClass = bgClassMap[bgColor];
 
   return (
-    <footer className={`${bgClass} pt-14 px-4 md:px-14 pb-8`}>
-      <div className="max-w-7xl mx-auto flex flex-row items-start justify-between gap-8 overflow-x-auto">
+    <footer className={`${bgClass}`}>
+      <div className="px-4 md:px-15 pt-14 pb-8">
+        <div className="max-w-360 mx-auto flex flex-row items-start justify-between gap-8 overflow-x-auto">
         <div className="shrink-0 w-62.5">
           <h3 className="font-display text-2xl font-bold text-gray-700 mb-4">VIPHO Foundation</h3>
           <p className="text-sm text-gray-600 leading-relaxed">
@@ -60,14 +61,15 @@ export default function Footer({ bgColor = 'primary-50' }: FooterProps) {
 
       <div className="border-t border-gray-200 mt-8 pt-8 text-center flex flex-row justify-between">
         <p className="text-sm text-gray-500">
-          © {new Date().getFullYear()} VIPHO Foundation. Tous droits réservés.
+            © {new Date().getFullYear()} VIPHO Foundation. Tous droits r&eacute;serv&eacute;s.
         </p>
 
         <div className="flex flex-row text-sm text-gray-500 gap-4">
-          <a href="" className="">Mention légales</a>
+          <a href="" className="">Mention l&eacute;gales</a>
           <a href="" className="">Conditions d'utilisation</a>
           <a href="" className="">Politique de confidentialité</a>
         </div>
+      </div>
       </div>
     </footer>
   );

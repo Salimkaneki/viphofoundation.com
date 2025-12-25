@@ -10,7 +10,6 @@ export default function FileInput({
   label,
   required = false,
   maxSizeText = "(La taille du fichier ne doit pas dépasser 10MB)",
-  className = "",
   ...props
 }: FileInputProps) {
   return (
@@ -34,7 +33,7 @@ export default function FileInput({
             <span className="text-sm font-medium">Choisir un fichier</span>
           </div>
           <div className="flex flex-col gap-1 items-center">
-            <span className="text-sm text-gray-500">Aucun fichier n'est sélectionné</span>
+            <span className="text-sm text-gray-500">Aucun fichier n&apos;est sélectionné</span>
             {maxSizeText && (
               <p className="text-xs text-gray-500">{maxSizeText}</p>
             )}

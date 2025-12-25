@@ -23,7 +23,6 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Contact form data:", formData);
     // Handle form submission
   };
 
@@ -38,7 +37,7 @@ export default function ContactPage() {
 
           <div className="space-y-4">
             <p className="max-w-xl text-lg text-gray-700">
-              Vous avez des questions ou souhaitez nous contacter ? N'hésitez pas à nous envoyer un message.
+              Vous avez des questions ou souhaitez nous contacter ? N&apos;hésitez pas à nous envoyer un message.
               Notre équipe vous répondra dans les plus brefs délais.
             </p>
           </div>

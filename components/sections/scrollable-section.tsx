@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect, ReactNode } from "react";
+import Image from "next/image";
 
 interface ScrollableSectionProps {
   title?: string;
@@ -63,20 +64,20 @@ export default function ScrollableSection({
         <div className="flex gap-6 items-center">
           {/* Flèche gauche */}
           <button onClick={scrollLeft} className="group flex items-center">
-            <img
+            <Image
               src={canScrollLeft ? "/icons/fleche-gauche-1.svg" : "/icons/fleche-gauche-0.svg"}
-              width="100"
-              height="18"
+              width={100}
+              height={18}
               alt="Flèche gauche"
             />
           </button>
 
           {/* Flèche droite */}
           <button onClick={scrollRight} className="group flex items-center">
-            <img
+            <Image
               src={canScrollRight ? "/icons/fleche-droite-1.svg" : "/icons/fleche-droite-0.svg"}
-              width="112"
-              height="18"
+              width={112}
+              height={18}
               alt="Flèche droite"
             />
           </button>

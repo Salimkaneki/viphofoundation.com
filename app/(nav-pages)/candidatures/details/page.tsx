@@ -13,14 +13,14 @@ export default function CandidatureDetailsPage() {
             ]} />
 
             <section className="w-full mx-auto py-20 px-15 bg-yellow-50">
-                <div className="max-w-7xl mx-auto">
-                    <h1 className="font-bold font-display text-4xl md:text-6xl text-center text-gray-600">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </h1>
-                </div>
+                <div className="max-w-360 mx-auto">
+                        <h1 className="font-bold font-display text-4xl md:text-6xl text-center text-gray-600">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </h1>
+                    </div>
             </section>
 
-            <section className="max-w-7xl mx-auto py-12 px-15">
+            <section className="max-w-360 mx-auto py-12 px-15">
                 <div className="flex flex-col lg:flex-row gap-12">
                     {/* Description principale */}
                     <div className="flex-1 space-y-6">

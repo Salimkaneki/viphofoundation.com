@@ -11,16 +11,6 @@ export default function LanguageSelector({ className = "" }: LanguageSelectorPro
   const handleLanguageChange = (value: string) => {
     setSelectedLanguage(value);
     // Ici vous pourrez ajouter la logique pour changer la langue de l'application
-    console.log("Langue sélectionnée:", value);
-  };
-
-  const getLanguageDisplay = (lang: string) => {
-    switch (lang) {
-      case "fr": return "Fr";
-      case "en": return "En";
-      case "es": return "Es";
-      default: return "Fr";
-    }
   };
 
   return (
