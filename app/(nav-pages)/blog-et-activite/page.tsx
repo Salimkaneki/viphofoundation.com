@@ -14,35 +14,37 @@ export default function BlogActivitePage() {
         </h1>
       </section>
 
-      <ScrollableSection>
-        <BlogCard
-          cardColor="bg-primary-300"
-          title="Projet éducatif : Soutien scolaire pour les enfants défavorisés"
-        />
-        <BlogCard
-          cardColor="bg-primary-400"
-          title="Campagne de sensibilisation environnementale dans les écoles"
-        />
-        <BlogCard
-          cardColor="bg-primary-500"
-          title="Distribution de repas chauds aux familles nécessiteuses"
-        />
-        <BlogCard
-          cardColor="bg-yellow-300"
-          title="Atelier de formation professionnelle pour les jeunes"
-        />
-        <BlogCard
-          cardColor="bg-yellow-400"
-          title="Partenariat avec les associations locales pour l'aide sociale"
-        />
-        <BlogCard
-          cardColor="bg-yellow-500"
-          title="Programme de santé préventive dans les quartiers populaires"
-        />
-      </ScrollableSection>
+      <div className="max-w-360 mx-auto">
+        <ScrollableSection>
+          <BlogCard
+            cardColor="bg-primary-300"
+            title="Projet éducatif : Soutien scolaire pour les enfants défavorisés"
+          />
+          <BlogCard
+            cardColor="bg-primary-400"
+            title="Campagne de sensibilisation environnementale dans les écoles"
+          />
+          <BlogCard
+            cardColor="bg-primary-500"
+            title="Distribution de repas chauds aux familles nécessiteuses"
+          />
+          <BlogCard
+            cardColor="bg-yellow-300"
+            title="Atelier de formation professionnelle pour les jeunes"
+          />
+          <BlogCard
+            cardColor="bg-yellow-400"
+            title="Partenariat avec les associations locales pour l'aide sociale"
+          />
+          <BlogCard
+            cardColor="bg-yellow-500"
+            title="Programme de santé préventive dans les quartiers populaires"
+          />
+        </ScrollableSection>
+      </div>
 
       <section>
-        <div className="px-15 py-10">
+        <div className="max-w-360 mx-auto px-15 py-10">
           <SectionHeader title="Tous les articles et blogs" />
 
           <div>
@@ -78,7 +80,7 @@ export default function BlogActivitePage() {
           </div>
         </div>
 
-        <div className="px-15 pb-10">
+        <div className="max-w-360 mx-auto px-15 pb-10">
           <Pagination
             currentPage={1}
             totalPages={5}

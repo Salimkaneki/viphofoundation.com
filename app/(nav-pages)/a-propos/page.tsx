@@ -27,15 +27,17 @@ export default function AProposPage() {
         </div>
       </section>
 
-      <ScrollableSection
-        title="Blog et articles"
-        subtitle="Récentes actualités et articles"
-      >
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-      </ScrollableSection>
+      <div className="max-w-360 mx-auto">
+        <ScrollableSection
+          title="Blog et articles"
+          subtitle="Récentes actualités et articles"
+        >
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+        </ScrollableSection>
+      </div>
 
     </div>
   );
